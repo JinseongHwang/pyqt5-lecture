@@ -14,17 +14,17 @@ class MyApp(QWidget):
         labelBlue = QLabel('Blue')
 
         labelRed.setStyleSheet("color: red;"
-                              "border-style: solid;"
-                              "border-width: 2px;"
-                              "border-color: #FA8072;"
-                              "border-radius: 5px")
+                               "border-style: solid;"
+                               "border-width: 2px;"
+                               "border-color: #FA8072;"
+                               "border-radius: 5px")
         labelGreen.setStyleSheet("color: green;"
-                                "background-color: #7FFFD4")
+                                 "background-color: #7FFFD4")
         labelBlue.setStyleSheet("color: blue;"
-                               "background-color: #87CEFA;"
-                               "border-style: dashed;"
-                               "border-width: 3px;"
-                               "border-color: #1E90FF")
+                                "background-color: #87CEFA;"
+                                "border-style: dashed;"
+                                "border-width: 3px;"
+                                "border-color: #1E90FF")
 
         vbox = QVBoxLayout()
         vbox.addWidget(labelRed)

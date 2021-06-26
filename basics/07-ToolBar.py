@@ -13,21 +13,25 @@ class MyApp(QMainWindow):
         self.statusBar()
 
         # exitAction 을 생성합니다.
-        exitAction = QAction(QIcon('../resources/exit.png'), 'Exit', self)
+        exitAction = QAction(QIcon(
+            'C:\\Users\\User\\Desktop\\my-lecture-material\\pyqt5-lecture\\resources\\exit.png'), 'Exit', self)
         exitAction.setShortcut('Ctrl+Q')
         exitAction.setStatusTip('Exit application')
         exitAction.triggered.connect(qApp.quit)
 
-        saveAction = QAction(QIcon('../resources/save.png'), 'Save', self)
+        saveAction = QAction(QIcon(
+            'C:\\Users\\User\\Desktop\\my-lecture-material\\pyqt5-lecture\\resources\\save.png'), 'Save', self)
         saveAction.setStatusTip('Save application')
 
-        editAction = QAction(QIcon('../resources/edit.png'), 'Edit', self)
+        editAction = QAction(QIcon(
+            'C:\\Users\\User\\Desktop\\my-lecture-material\\pyqt5-lecture\\resources\\edit.png'), 'Edit', self)
         editAction.setStatusTip('Edit application')
 
-        printAction = QAction(QIcon('../resources/print.png'), 'Print', self)
+        printAction = QAction(QIcon(
+            'C:\\Users\\User\\Desktop\\my-lecture-material\\pyqt5-lecture\\resources\\print.png'), 'Print', self)
         printAction.setStatusTip('Print application')
 
-        self.toolbar = self.addToolBar('Exit') # ToolBar 에 Exit 을 추가한다.
+        self.toolbar = self.addToolBar('Exit')  # ToolBar 에 Exit 을 추가한다.
         self.toolbar.addAction(exitAction)  # exitAction 을 추가한다.
 
         self.toolbar = self.addToolBar('Save')
