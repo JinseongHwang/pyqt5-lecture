@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, qApp
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction
 from PyQt5.QtGui import QIcon
 
 
@@ -16,13 +16,13 @@ class MyApp(QMainWindow):
             'C:\\Users\\User\\Desktop\\my-lecture-material\\pyqt5-lecture\\resources\\exit.png'), 'Exit', self)
         exitAction.setShortcut('Ctrl+Q')  # 단축키 Ctrl + Q 사용 가능
         exitAction.setStatusTip('Exit application')  # statusBar 에 나타날 텍스트 지정
-        # 이 동작을 선택했을 때 생성된 시그널이 quit 메서드에 연결되어 Application 이 종료됨
-        exitAction.triggered.connect(qApp.quit)
+        # 이 동작을 선택했을 때 생성된 시그널이 quit 함수에 연결되어 Application 이 종료됨
+        exitAction.triggered.connect(QApplication.quit)
 
         menuBar = self.menuBar()  # 메뉴바 생성
         menuBar.setNativeMenuBar(False)  # MacOS 에서도 동작하도록 하는 설정
         # File 이라는 메뉴를 추가 (Alt + F 로 선택 가능)
-        fileMenu = menuBar.addMenu('&File')
+        fileMenu = menuBar.addMenu('&File')  # & 위치로 단축키 설정
         fileMenu.addAction(exitAction)  # File 메뉴에 exitAction 을 추가
 
         self.setWindowTitle('Menubar')
