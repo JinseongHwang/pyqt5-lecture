@@ -1,16 +1,17 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtCore import QDate, Qt
+from PyQt5.QtCore import QDate, Qt, QTime
 
 
 class MyApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.date = QDate.currentDate()
+        self.time = QTime.currentTime()
         self.initUI()
 
     def initUI(self):
-        self.statusBar().showMessage(self.date.toString(Qt.DefaultLocaleLongDate))
+        self.statusBar().showMessage(self.time.toString('hh.mm.ss.zzz'))
 
         self.setWindowTitle('Date')
         self.setGeometry(300, 300, 400, 200)
